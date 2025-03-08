@@ -14,3 +14,10 @@ workspace:
   - packages/stratos_jsonc
   - packages/stratos_yaml
   - packages/stratos_markdown
+
+melos:
+  sdkPath: .dvm/dart_sdk
+
+  ide:
+    intellij:
+      enabled: false
