@@ -1,0 +1,9 @@
+name: stratos_workspace
+description: Workspace for stratos packages
+publish_to: none
+
+environment:
+  sdk: ^3.7.1
+
+dev_dependencies:
+  melos: ^7.0.0-dev.3
