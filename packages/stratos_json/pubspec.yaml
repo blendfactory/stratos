@@ -1,6 +1,7 @@
 name: stratos_json
 description: A tool for linting and formatting JSON files
 version: 0.0.1
+homepage: https://github.com/blendfactory/stratos/tree/main/packages/stratos_json
 repository: https://github.com/blendfactory/stratos
 
 resolution: workspace

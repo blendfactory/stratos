@@ -1,6 +1,7 @@
 name: stratos
 description: A tool for linting and formatting JSON, JSONC, YAML, and Markdown files
 version: 0.0.1
+homepage: https://github.com/blendfactory/stratos/tree/main/packages/stratos
 repository: https://github.com/blendfactory/stratos
 
 resolution: workspace
