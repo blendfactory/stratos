@@ -4,6 +4,41 @@
 
 Stratos is a set of Dart packages for linting and formatting JSON, JSONC, YAML, and Markdown files. It's structured as a monorepo using Dart Pub Workspace and Melos.
 
+## Stratos Commands
+
+```shell
+A linter and formatter for JSON, JSONC, YAML, and Markdown files
+
+Usage: stratos <command> [options] [path]
+
+Global options:
+  -v, --verbose     Show additional command output.
+      --version     Print this package version.
+  -h, --help        Print this usage information.
+
+Available commands:
+  init              Creates a configuration file (.stratos.jsonc) with some defaults.
+  config            View or modify configuration settings.
+  analyze           Analyze files according to style rules.
+  format            Format files according to style rules.
+
+Examples:
+  # Initialize
+  $ stratos init
+
+  # View current configuration
+  $ stratos config --list
+
+  # Change a configuration setting
+  $ stratos config --set markdown.line_length 100
+
+  # Analyze all supported files in the current directory
+  $ stratos analyze .
+
+  # Format only JSON files
+  $ stratos format --type=json .
+```
+
 ## Technical Stack
 
 ### Environment
