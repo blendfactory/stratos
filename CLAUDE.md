@@ -73,7 +73,7 @@ Examples:
 # Bootstrap all packages with Melos
 melos bootstrap
 
-# Run analyzer for all package
+# Run analyzer for all packages
 dvm dart analyze
 
 # Run format for all packages
