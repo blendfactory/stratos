@@ -29,3 +29,13 @@ melos:
       dependencies:
         args: ^2.6.0
         path: ^1.9.1
+
+  scripts:
+    test:
+      description: Run tests for Dart packages.
+      run: dart test
+      exec:
+        orderDependents: true
+      packageFilters:
+        dependsOn: test
+        dirExists: test
