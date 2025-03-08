@@ -1,0 +1,17 @@
+# DVM related files
+.dvm/
+
+# GitHub related files
+.github/
+
+# VSCode related files
+.vscode/
+
+# Example files
+example/
+
+# License file
+LICENSE
+
+# Lock files
+*.lock
