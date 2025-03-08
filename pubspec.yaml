@@ -7,3 +7,10 @@ environment:
 
 dev_dependencies:
   melos: ^7.0.0-dev.3
+
+workspace:
+  - packages/stratos
+  - packages/stratos_json
+  - packages/stratos_jsonc
+  - packages/stratos_yaml
+  - packages/stratos_markdown
