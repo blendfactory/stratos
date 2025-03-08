@@ -1,0 +1,40 @@
+name: Publish packages to pub.dev
+
+on:
+  push:
+    tags:
+      - "*-v[0-9]+.[0-9]+.[0-9]+*"
+
+permissions:
+  id-token: write # Required for authentication using OIDC
+
+jobs:
+  publish-stratos:
+    if: startsWith(github.ref, 'refs/tags/stratos-v')
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@e51d8e571e22473a2ddebf0ef8a2123f0ab2c02c # v1.7.1
+    with:
+      working-directory: packages/stratos
+
+  publish-stratos_json:
+    if: startsWith(github.ref, 'refs/tags/stratos_json-v')
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@e51d8e571e22473a2ddebf0ef8a2123f0ab2c02c # v1.7.1
+    with:
+      working-directory: packages/stratos_json
+
+  publish-stratos_jsonc:
+    if: startsWith(github.ref, 'refs/tags/stratos_jsonc-v')
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@e51d8e571e22473a2ddebf0ef8a2123f0ab2c02c # v1.7.1
+    with:
+      working-directory: packages/stratos_jsonc
+
+  publish-stratos_markdown:
+    if: startsWith(github.ref, 'refs/tags/stratos_markdown-v')
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@e51d8e571e22473a2ddebf0ef8a2123f0ab2c02c # v1.7.1
+    with:
+      working-directory: packages/stratos_markdown
+
+  publish-stratos_yaml:
+    if: startsWith(github.ref, 'refs/tags/stratos_yaml-v')
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@e51d8e571e22473a2ddebf0ef8a2123f0ab2c02c # v1.7.1
+    with:
+      working-directory: packages/stratos_yaml
