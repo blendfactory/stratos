@@ -1,0 +1,24 @@
+{
+  "dart.runPubGetOnPubspecChanges": "never",
+  "dart.sdkPath": ".dvm/dart_sdk",
+  "search.exclude": {
+    "**/.dvm": true
+  },
+  "files.watcherExclude": {
+    "**/.dvm": true
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.dart": "$(capture).g.dart, $(capture).freezed.dart",
+    "pubspec.yaml": "pubspec.lock, pubspec_overrides.yaml"
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-issue-config.json": ".github/ISSUE_TEMPLATE/config.yaml",
+  },
+}
