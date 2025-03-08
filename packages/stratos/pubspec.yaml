@@ -1,7 +1,7 @@
 name: stratos
-description: A sample command-line application with basic argument parsing.
+description: A tool for linting and formatting JSON, JSONC, YAML, and Markdown files
 version: 0.0.1
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/blendfactory/stratos
 
 resolution: workspace
 
