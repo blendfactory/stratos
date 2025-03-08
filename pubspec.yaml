@@ -21,7 +21,7 @@ melos:
   ide:
     intellij:
       enabled: false
-  
+
   command:
     bootstrap:
       environment:
