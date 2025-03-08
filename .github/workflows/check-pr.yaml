@@ -1,0 +1,38 @@
+name: Check Pull Request
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  actions: read
+  checks: write
+
+concurrency:
+  group: check-pr-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Set up the project
+        uses: ./.github/actions/setup
+
+      - name: Report analyze
+        uses: invertase/github-action-dart-analyzer@e981b01a458d0bab71ee5da182e5b26687b7101b # v3.0.0
+        with:
+          fatal-infos: true
+
+      - name: Check format
+        run: melos format --output none --set-exit-if-changed
+
+      - name: Check for circular dependencies
+        run: melos list --cycles
+
+      - name: Run test
+        run: melos run test --no-select
