@@ -12,6 +12,10 @@ environment:
 dependencies:
   args: ^2.6.0
   path: ^1.9.1
+  stratos_json: ^0.0.1
+  stratos_jsonc: ^0.0.1
+  stratos_markdown: ^0.0.1
+  stratos_yaml: ^0.0.1
 
 dev_dependencies:
   lints: ^5.0.0
