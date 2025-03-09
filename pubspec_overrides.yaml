@@ -1,5 +1,0 @@
-workspace:
-  - packages/stratos_json
-  - packages/stratos_jsonc
-  - packages/stratos_yaml
-  - packages/stratos_markdown
