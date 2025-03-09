@@ -1,2 +1,5 @@
 # Dart related
 /.dart_tool/*
+
+# Melos related
+pubspec_overrides.yaml

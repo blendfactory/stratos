@@ -31,6 +31,31 @@ melos:
         path: ^1.9.1
       dev_dependencies:
         test: ^1.25.15
+      hooks:
+        pre: |
+          rm -f pubspec_overrides.yaml
+          cat > pubspec_overrides.yaml << \EOF
+          workspace:
+            - packages/stratos_json
+            - packages/stratos_jsonc
+            - packages/stratos_yaml
+            - packages/stratos_markdown
+          EOF
+
+          rm -f packages/stratos/pubspec_overrides.yaml
+          cat > packages/stratos/pubspec_overrides.yaml << \EOF
+          resolution:
+
+          dependency_overrides:
+            stratos_json:
+              path: ../stratos_json
+            stratos_jsonc:
+              path: ../stratos_jsonc
+            stratos_markdown:
+              path: ../stratos_markdown
+            stratos_yaml:
+              path: ../stratos_yaml
+          EOF
 
   scripts:
     test:
