@@ -1,0 +1,69 @@
+---
+description: TDD mandatory rules and best practices adopted in the Stratos project
+globs: *.dart
+alwaysApply: true
+---
+# TDD (Test-Driven Development) Rules
+
+## Mandatory Rules
+
+1. **Test First**: Always write tests before implementation
+2. **Follow the Red-Green-Refactor Cycle**: 
+   - Write a failing test (Red)
+   - Write minimal code to make the test pass (Green)
+   - Improve the code (Refactor)
+3. **100% Test Coverage**: Ensure all code paths are covered by tests
+4. **Run Tests Before Committing**: Verify all tests pass before committing code
+5. **Include Both Tests and Implementation in Pull Requests**: PRs without tests will not be accepted
+
+## Test Design Rules
+
+1. **Single Responsibility Principle**: Each test should test only one feature/concept
+2. **Clear Test Names**: `test('should do something when something happens', () {...`
+3. **Use the AAA (Arrange-Act-Assert) Pattern**:
+   ```dart
+   test('should return correct value', () {
+     // Arrange
+     final sut = MyClass();
+     // Act
+     final result = sut.myMethod();
+     // Assert
+     expect(result, expectedValue);
+   });
+   ```
+4. **Boundary Value Testing**: Always test minimum values, maximum values, and edge cases
+
+## Code Implementation Rules
+
+1. **Start with Simple Implementation**: Begin with minimal code to make tests pass
+2. **Avoid Unnecessary Abstraction**: Don't introduce complex designs until truly needed
+3. **Apply DRY**: Eliminate duplicate code during the refactoring phase
+4. **Clean Code**: Ensure naming, structure, and comments are clear and understandable
+
+## Workflow Rules
+
+1. Issue selection → Branch creation → Test creation → Implementation → Refactoring → PR
+2. Small PRs for Individual Features: Limit each PR to one feature or a small related feature set
+3. CI Passing: Ensure all automated tests pass
+
+## Types of Tests
+
+| Type | Purpose | Characteristics |
+|---|---|---|
+| Unit Tests | Verify behavior of individual classes/functions | Mock external dependencies, fast execution |
+| Integration Tests | Verify cooperation between components | May use actual dependencies in some cases |
+| E2E Tests | Verify system-wide functionality | Testing from user's perspective |
+
+## Common Mistakes
+
+❌ Writing tests after implementation  
+❌ Skipping tests to proceed with implementation  
+❌ Continuing implementation despite failing tests  
+❌ Ignoring the quality of test code  
+❌ Overly complex tests
+
+## Reference Resources
+
+- [Test-Driven Development (Kent Beck)](mdc:https:/www.amazon.co.jp/dp/4274217884)
+- [Growing Object-Oriented Software, Guided by Tests (Steve Freeman, Nat Pryce)](mdc:https:/www.amazon.co.jp/dp/4798124583)
+- [Dart/Flutter Testing Guide](mdc:https:/docs.flutter.dev/testing)
