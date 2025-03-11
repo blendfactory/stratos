@@ -1,9 +1,4 @@
----
-description: stratos_json: JSON Style Rules Specification
-globs: packages/stratos_json/**/*.dart
-alwaysApply: false
----
-# JSON Style Rules List
+# JSON Style Rules Specification
 
 This document defines the details of JSON style rules used in the stratos_json package's JSON linter and formatter. These rules are used to ensure consistent formatting and readability of JSON files.
 
