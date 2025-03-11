@@ -5,6 +5,8 @@ alwaysApply: true
 ---
 # TDD Task Workflow
 
+> **Note**: This document explains the practical workflow for implementing features using TDD. Please also refer to the companion document: [TDD Rules](tdd_rules.mdc) for the fundamental rules and best practices that should be followed throughout this workflow.
+
 This document explains the workflow for executing tasks using TDD. Each developer should follow this workflow when implementing features.
 
 ## 1. Basic Workflow
