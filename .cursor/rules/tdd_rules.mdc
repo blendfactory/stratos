@@ -5,7 +5,7 @@ alwaysApply: true
 ---
 # TDD (Test-Driven Development) Rules
 
-> **Note**: This document contains the essential rules and best practices for TDD. For a detailed implementation workflow, please refer to the companion document: [TDD Task Workflow](tdd_task_workflow.mdc).
+> **Note**: This document contains the essential rules and best practices for TDD. For a detailed implementation workflow, please refer to the companion document: [TDD Task Workflow](mdc:tdd_task_workflow.mdc).
 
 ## Mandatory Rules
 
