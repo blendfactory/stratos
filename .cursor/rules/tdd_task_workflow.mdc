@@ -1,0 +1,157 @@
+---
+description: Workflow for implementing features using Test-Driven Development
+globs: *
+alwaysApply: true
+---
+# TDD Task Workflow
+
+This document explains the workflow for executing tasks using TDD. Each developer should follow this workflow when implementing features.
+
+## 1. Basic Workflow
+
+### 1.1 Issue Selection
+
+1. Select a task to implement from GitHub Issues
+2. Assign yourself to the issue and add the "in progress" label
+3. Create an implementation branch: `GH-[issue number]` or `GH-[issue number]/[brief description]`
+
+### 1.2 Executing the TDD Cycle
+
+**Red**: Write a failing test
+
+1. Create/edit the test file for the feature you're implementing
+2. First, write a failing unit test
+3. Confirm that the test fails: `melos run test`
+
+**Green**: Implement the minimum code to pass the test
+
+1. Implement the minimum code necessary to make the test pass
+2. Confirm that the test succeeds: `melos run test`
+3. At this stage, prioritize functionality over code elegance
+
+**Refactor**: Improve the code
+
+1. With tests passing, clean up your code
+2. Improve code readability, maintainability, and efficiency
+3. Confirm that tests still pass after refactoring
+
+### 1.3 Repeating the Cycle
+
+1. Add new tests for different aspects of the feature
+2. Repeat the Red-Green-Refactor cycle above
+3. Continue until all necessary tests pass
+
+### 1.4 Pull Request
+
+1. Create a pull request when all tests pass and the feature is complete
+2. Include `#[Issue number]` in the pull request title
+3. Include an explanation of the implementation and screenshots of test results
+
+## 2. Detailed Step Guide
+
+### 2.1 Test Creation Best Practices
+
+#### Unit Test Structure
+
+```dart
+void main() {
+  group('ClassName', () {
+    // Setup as needed
+    setUp(() {
+      // Preparation before test
+    });
+    
+    tearDown(() {
+      // Cleanup after test
+    });
+    
+    group('MethodName', () {
+      test('Clear description of what is being tested', () {
+        // Arrange: Prepare test data
+        final input = ...;
+        
+        // Act: Execute the function/method being tested
+        final result = ...;
+        
+        // Assert: Verify the results
+        expect(result, equals(expected));
+      });
+      
+      // Other test cases
+    });
+  });
+}
+```
+
+#### Test Case Selection Considerations
+
+1. **Normal Case Tests**: Confirm expected results are obtained for expected inputs
+2. **Error Case Tests**: Confirm appropriate errors are thrown for invalid inputs
+3. **Boundary Value Tests**: Test boundary conditions (minimum values, maximum values, edge cases)
+4. **Special Case Tests**: Test special cases such as null, empty strings, empty lists, etc.
+
+### 2.2 Implementation Best Practices
+
+#### Code Quality Standards
+
+1. **DRY Principle**: Avoid code duplication
+2. **SRP Principle**: Each class/method should have a single responsibility
+3. **Appropriate Naming**: Variable, method, and class names should clearly indicate their purpose
+4. **Comments**: Add appropriate comments for complex logic
+5. **Error Handling**: Proper exception handling and error messages
+
+#### Refactoring Approach
+
+1. **Small Changes**: Make small incremental changes rather than large changes at once
+2. **Test at Each Step**: Run tests at each refactoring step
+3. **No Functional Changes**: Don't change functionality during refactoring
+4. **Code Organization**: Organize code through method extraction, class division, etc.
+
+## 3. Common Problems and Solutions
+
+### 3.1 Test Failure Cases
+
+- **Difficult to Write Tests**: Possibly poor code design (too many dependencies, etc.)
+- **Fragile Tests**: Tests depend too much on implementation details
+- **Slow Tests**: Tests depend on external resources
+
+### Solutions
+
+- Introduce interfaces to make dependencies loosely coupled
+- Use mocks or stubs to make external dependencies testable
+- Ensure tests verify behavior rather than implementation
+
+### 3.2 Implementation Problems
+
+- **Code Too Complex**: Too many responsibilities or overly complex functionality
+- **Difficult to Test**: Untestable code exists
+
+### Solutions
+
+- Split classes according to the single responsibility principle
+- Prioritize pure functions and minimize side effects
+- Utilize dependency injection
+
+## 4. Communication
+
+- Comment on the Issue if problems or questions arise during implementation
+- Discuss design changes early if needed
+- Aim for constructive feedback during code reviews
+
+## 5. Checklist
+
+### Before Starting an Issue
+
+- [ ] Completely understand the task requirements
+- [ ] Reviewed related code reviews
+- [ ] Necessary development environment is ready
+
+### Before Submitting a Pull Request
+
+- [ ] All tests pass
+- [ ] Code passes linter/formatter
+- [ ] Documentation updated (if necessary)
+- [ ] Removed unnecessary debug code and commented-out code
+- [ ] Commit messages are clear and explain what has been changed
+
+Following this workflow will enable efficient development of consistent, high-quality code.
