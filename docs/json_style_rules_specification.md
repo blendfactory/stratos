@@ -15,77 +15,195 @@ Style rules are classified into the following categories:
 
 ### F1. Indentation
 
-#### F1.1 Indentation Type
+#### F1.1 Indentation Style
 
-Use spaces or tabs (Default: spaces)
+- Key
+  - `json.format.indentStyle`
+- Description
+  - Specifies the character type used for indentation
+- Value
+  - `space`
+  - `tab`
+- Default
+  - `space`
 
 #### F1.2 Indentation Width
 
-2 spaces or 4 spaces (Default: 2 spaces)
+- Key
+  - `json.format.indentWidth`
+- Description
+  - Specifies the width of indentation
+- Value
+  - `2`
+  - `4`
+- Default
+  - `2`
 
-#### F1.3 Consistent Indentation
-
-Nodes at the same depth should have the same indentation level
-
-### F2. Line Ending
+### F2. Line
 
 #### F2.1 Line Ending Character
 
-LF (`\n`) or CRLF (`\r\n`) (Default: LF)
+- Key
+  - `json.format.lineEnding`
+- Description
+  - Specifies the line ending character
+- Value
+  - `lf`: LF ( `\n` )
+  - `crlf`: CRLF ( `\r\n` )
+  - `cr`: CR ( `\r` )
+- Default
+  - `lf`
 
-#### F2.2 Newline at End of File
+#### F2.2 Line Width
 
-Include/exclude a newline at the end of file (Default: include)
+- Key
+  - `json.format.lineWidth`
+- Description
+  - Specifies the maximum number of characters per line
+- Value
+  - The maximum number of characters per line
+- Default
+  - `120`
 
 ### F3. Whitespace
 
 #### F3.1 Trailing Whitespace
 
-Remove unnecessary whitespace at the end of lines
+- Key
+  - `json.format.trailingWhitespace`
+- Description
+  - Specifies how to handle unnecessary whitespace at the end of lines
+- Value
+  - `remove`
+  - `allow`
+- Default
+  - `remove`
 
 #### F3.2 Whitespace After Colon
 
-Include one space after a colon (e.g., `"name": "value"`)
+- Key
+  - `json.format.whitespaceAfterColon`
+- Description
+  - Specifies whether to include a space after a colon (e.g., `"name": "value"`)
+- Value
+  - `true`
+  - `false`
+- Default
+  - `true`
 
 #### F3.3 Whitespace After Comma
 
-Include one space after a comma
+- Key
+  - `json.format.whitespaceAfterComma`
+- Description
+  - Specifies whether to include a space after a comma
+- Value
+  - `true`
+  - `false`
+- Default
+  - `true`
 
 #### F3.4 Whitespace Inside Brackets
 
-No whitespace immediately after or before brackets
+- Key
+  - `json.format.whitespaceInsideBrackets`
+- Description
+  - Specifies how to handle whitespace immediately after or before brackets
+- Value
+  - `none`
+  - `single`
+- Default
+  - `none`
 
 ### F4. Line Breaks
 
 #### F4.1 Line Break After Object Start
 
-Include/exclude a line break after the opening brace `{`
+- Key
+  - `json.format.lineBreakAfterObjectStart`
+- Description
+  - Specifies whether to include a line break after the opening brace `{`
+- Value
+  - `true`
+  - `false`
+- Default
+  - `true`
 
 #### F4.2 Line Break Before Object End
 
-Include/exclude a line break before the closing brace `}`
+- Key
+  - `json.format.lineBreakBeforeObjectEnd`
+- Description
+  - Specifies whether to include a line break before the closing brace `}`
+- Value
+  - `true`
+  - `false`
+- Default
+  - `true`
 
 #### F4.3 Line Break After Array Start
 
-Include/exclude a line break after the opening bracket `[`
+- Key
+  - `json.format.lineBreakAfterArrayStart`
+- Description
+  - Specifies whether to include a line break after the opening bracket `[`
+- Value
+  - `true`
+  - `false`
+- Default
+  - `true`
 
 #### F4.4 Line Break Before Array End
 
-Include/exclude a line break before the closing bracket `]`
+- Key
+  - `json.format.lineBreakBeforeArrayEnd`
+- Description
+  - Specifies whether to include a line break before the closing bracket `]`
+- Value
+  - `true`
+  - `false`
+- Default
+  - `true`
 
 #### F4.5 Line Break Between Properties
 
-Include a line break between each property
+- Key
+  - `json.format.lineBreakBetweenProperties`
+- Description
+  - Specifies whether to include a line break between each property
+- Value
+  - `true`
+  - `false`
+- Default
+  - `true`
 
 ### F5. Comma
 
 #### F5.1 Trailing Comma
 
-Allow/prohibit comma after the last element/property (prohibited in RFC 8259)
+- Key
+  - `json.format.trailingComma`
+- Description
+  - Specifies whether to allow a comma after the last element/property
+    (prohibited in RFC 8259)
+- Value
+  - `allow`
+  - `prohibit`
+- Default
+  - `prohibit`
 
 #### F5.2 Comma Style
 
-Place on the same line or at the beginning of the next line
+- Key
+  - `json.format.commaStyle`
+- Description
+  - Specifies whether commas should be placed on the same line or at the
+    beginning of the next line
+- Value
+  - `same`
+  - `next`
+- Default
+  - `same`
 
 ## Structure Rules
 
@@ -93,35 +211,91 @@ Place on the same line or at the beginning of the next line
 
 #### S1.1 Maximum Nesting Depth
 
-Maximum depth for nested objects and arrays (Default: 8)
+- Key
+  - `json.structure.maxNestingDepth`
+- Description
+  - Specifies the maximum depth for nested objects and arrays
+- Value
+  - Integer value representing maximum depth
+- Default
+  - `8`
 
 #### S1.2 Simplification Recommendation
 
-Recommend simplifying structure when exceeding certain depth
+- Key
+  - `json.structure.simplificationThreshold`
+- Description
+  - Specifies the threshold depth at which structure simplification is
+    recommended
+- Value
+  - Integer value representing threshold depth
+- Default
+  - `6`
 
 ### S2. Property Order
 
 #### S2.1 Alphabetical Order
 
-Order/don't order properties alphabetically
+- Key
+  - `json.structure.alphabeticalOrder`
+- Description
+  - Specifies whether to order properties alphabetically
+- Value
+  - `true`
+  - `false`
+- Default
+  - `false`
 
 #### S2.2 Property Grouping
 
-Group semantically related properties
+- Key
+  - `json.structure.propertyGrouping`
+- Description
+  - Specifies whether to group semantically related properties
+- Value
+  - `true`
+  - `false`
+- Default
+  - `false`
 
 #### S2.3 Standard Properties First
 
-Place standard properties like `id`, `type` at the beginning
+- Key
+  - `json.structure.standardPropertiesFirst`
+- Description
+  - Specifies whether to place standard properties (like `id`, `type`) at the
+    beginning
+- Value
+  - `true`
+  - `false`
+- Default
+  - `true`
 
 ### S3. Array Formatting
 
 #### S3.1 Single Line Arrays
 
-Place short arrays on a single line (configurable threshold)
+- Key
+  - `json.structure.singleLineArrays`
+- Description
+  - Specifies the threshold for the number of items to place arrays on a single
+    line
+- Value
+  - `threshold`: Maximum number of items for single line
+- Default
+  - `3`
 
 #### S3.2 Multi-line Arrays
 
-Split long arrays across multiple lines
+- Key
+  - `json.structure.multiLineArrays`
+- Description
+  - Specifies whether to split long arrays across multiple lines
+- Value
+  - `true`
+  - `false`
+- Default
+  - `true`
 
 ## Naming Rules
 
@@ -129,29 +303,79 @@ Split long arrays across multiple lines
 
 #### N1.1 Naming Convention
 
-camelCase, snake_case, kebab-case, PascalCase, etc. (Default: camelCase)
+- Key
+  - `json.naming.convention`
+- Description
+  - Specifies the naming convention for property names
+- Value
+  - `camelCase`
+  - `snake_case`
+  - `kebab-case`
+  - `PascalCase`
+  - `none`
+- Default
+  - `camelCase`
 
 #### N1.2 Consistency
 
-Use consistent naming conventions within the same object
+- Key
+  - `json.naming.consistency`
+- Description
+  - Specifies the required level of consistency in naming conventions within the
+    same object
+- Value
+  - `strict`
+  - `recommended`
+  - `none`
+- Default
+  - `strict`
 
 #### N1.3 Avoid Reserved Words
 
-Don't use JavaScript reserved words as property names
+- Key
+  - `json.naming.avoidReservedWords`
+- Description
+  - Specifies whether to avoid using JavaScript reserved words as property names
+- Value
+  - `true`
+  - `false`
+- Default
+  - `true`
 
 ### N2. Property Name Constraints
 
 #### N2.1 Length Limit
 
-Maximum length for property names (Default: 50 characters)
+- Key
+  - `json.naming.maxLength`
+- Description
+  - Specifies the maximum length for property names
+- Value
+  - Integer value representing maximum length
+- Default
+  - `50`
 
 #### N2.2 Allowed Characters
 
-Set of allowed characters (alphanumeric, underscore, hyphen, etc.)
+- Key
+  - `json.naming.allowedCharacters`
+- Description
+  - Specifies the set of characters allowed in property names
+- Value
+  - String pattern for allowed characters
+- Default
+  - `[a-zA-Z0-9_-]`
 
 #### N2.3 Naming Pattern
 
-Property names that follow specific patterns (specified by regular expressions)
+- Key
+  - `json.naming.pattern`
+- Description
+  - Specifies a regular expression pattern for property names
+- Value
+  - Regular expression string
+- Default
+  - `null`
 
 ## Value Rules
 
@@ -159,50 +383,137 @@ Property names that follow specific patterns (specified by regular expressions)
 
 #### V1.1 Quotation Marks
 
-Use double quotation marks (`"`) (JSON standard)
+- Key
+  - `json.value.quotationMarks`
+- Description
+  - Specifies the type of quotation marks for string values
+- Value
+  - `double`
+- Default
+  - `double`
 
 #### V1.2 Escape Sequences
 
-Differentiate between necessary and unnecessary escape sequences
+- Key
+  - `json.value.escapeSequences`
+- Description
+  - Specifies how to handle escape sequences in string values
+- Value
+  - `necessary`
+  - `all`
+- Default
+  - `necessary`
 
 #### V1.3 Length Limit
 
-Limit the maximum length of string values (Default: none)
+- Key
+  - `json.value.stringMaxLength`
+- Description
+  - Specifies the maximum length for string values
+- Value
+  - Integer value or `null` for no limit
+- Default
+  - `null`
 
 ### V2. Number
 
 #### V2.1 Precision
 
-Precision of floating-point numbers (limit on decimal places)
+- Key
+  - `json.value.numberPrecision`
+- Description
+  - Specifies the precision (decimal places) for floating-point numbers
+- Value
+  - Integer value representing max decimal places
+- Default
+  - `null`
 
 #### V2.2 Exponential Notation
 
-Allow/prohibit exponential notation (`1e10`)
+- Key
+  - `json.value.exponentialNotation`
+- Description
+  - Specifies whether to allow exponential notation (e.g., `1e10`)
+- Value
+  - `allow`
+  - `prohibit`
+- Default
+  - `allow`
 
 #### V2.3 Leading Zero
 
-Prohibit leading zeros in integers (JSON standard)
+- Key
+  - `json.value.leadingZero`
+- Description
+  - Specifies whether to allow leading zeros in integers
+- Value
+  - `prohibit`
+- Default
+  - `prohibit`
 
 ### V3. Boolean and null
 
 #### V3.1 Notation
 
-Write `true`, `false`, `null` in lowercase (JSON standard)
+- Key
+  - `json.value.booleanNullNotation`
+- Description
+  - Specifies the notation for boolean and null values
+- Value
+  - `lowercase`
+- Default
+  - `lowercase`
 
 #### V3.2 Explicit Values
 
-Prefer explicit values over implicit `null`
+- Key
+  - `json.value.explicitValues`
+- Description
+  - Specifies the preference level for explicit values over implicit `null`
+- Value
+  - `preferred`
+  - `required`
+  - `optional`
+- Default
+  - `preferred`
 
 ### V4. Arrays and Empty Values
 
 #### V4.1 Empty Arrays
 
-Policy for using empty arrays `[]`
+- Key
+  - `json.value.emptyArrays`
+- Description
+  - Specifies the policy for using empty arrays `[]`
+- Value
+  - `allow`
+  - `discourage`
+  - `prohibit`
+- Default
+  - `allow`
 
 #### V4.2 Empty Objects
 
-Policy for using empty objects `{}`
+- Key
+  - `json.value.emptyObjects`
+- Description
+  - Specifies the policy for using empty objects `{}`
+- Value
+  - `allow`
+  - `discourage`
+  - `prohibit`
+- Default
+  - `allow`
 
 #### V4.3 Consistent Types
 
-Recommend that elements in an array are of the same type
+- Key
+  - `json.value.consistentArrayTypes`
+- Description
+  - Specifies the required level of type consistency for elements in an array
+- Value
+  - `recommended`
+  - `required`
+  - `optional`
+- Default
+  - `recommended`
