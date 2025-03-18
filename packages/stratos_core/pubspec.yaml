@@ -1,13 +1,14 @@
 name: stratos_core
-description: A starting point for Dart libraries or applications.
-version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+description: Core package for stratos_json, stratos_jsonc, stratos_markdown, and stratos_yaml packages.
+version: 0.0.1
+repository: https://github.com/blendfactory/stratos
 
 environment:
   sdk: ^3.7.1
 
 # Add regular dependencies here.
 dependencies:
+  meta: ^1.12.0
   # path: ^1.8.0
 
 dev_dependencies:
