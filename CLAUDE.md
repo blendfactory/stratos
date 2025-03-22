@@ -61,6 +61,7 @@ Examples:
 .
 └── packages/
     ├── stratos/           # Main CLI tool that brings together the functionality of all packages
+    ├── stratos_core/      # Core functionality shared by all packages
     ├── stratos_json/      # JSON linting and formatting
     ├── stratos_jsonc/     # JSONC linting and formatting
     ├── stratos_yaml/      # YAML linting and formatting
