@@ -1,6 +1,7 @@
 name: stratos_core
 description: Core package for stratos_json, stratos_jsonc, stratos_markdown, and stratos_yaml packages.
 version: 0.0.1
+homepage: https://github.com/blendfactory/stratos/tree/main/packages/stratos_core
 repository: https://github.com/blendfactory/stratos
 
 environment:
