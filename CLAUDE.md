@@ -18,19 +18,12 @@ Global options:
 
 Available commands:
   init              Creates a configuration file (.stratos.jsonc) with some defaults.
-  config            View or modify configuration settings.
   analyze           Analyze files according to style rules.
   format            Format files according to style rules.
 
 Examples:
   # Initialize
   $ stratos init
-
-  # View current configuration
-  $ stratos config --list
-
-  # Change a configuration setting
-  $ stratos config --set markdown.line_length 100
 
   # Analyze all supported files in the current directory
   $ stratos analyze .
@@ -61,6 +54,7 @@ Examples:
 .
 └── packages/
     ├── stratos/           # Main CLI tool that brings together the functionality of all packages
+    ├── stratos_core/      # Core functionality shared by all packages
     ├── stratos_json/      # JSON linting and formatting
     ├── stratos_jsonc/     # JSONC linting and formatting
     ├── stratos_yaml/      # YAML linting and formatting
