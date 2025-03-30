@@ -4,6 +4,8 @@ version: 0.0.1
 homepage: https://github.com/blendfactory/stratos/tree/main/packages/stratos_core
 repository: https://github.com/blendfactory/stratos
 
+resolution: workspace
+
 environment:
   sdk: ^3.7.1
 
