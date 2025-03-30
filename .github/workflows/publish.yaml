@@ -15,6 +15,12 @@ jobs:
     with:
       working-directory: packages/stratos
 
+  publish-stratos_core:
+    if: startsWith(github.ref, 'refs/tags/stratos_core-v')
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@e51d8e571e22473a2ddebf0ef8a2123f0ab2c02c # v1.7.1
+    with:
+      working-directory: packages/stratos_core
+
   publish-stratos_json:
     if: startsWith(github.ref, 'refs/tags/stratos_json-v')
     uses: dart-lang/setup-dart/.github/workflows/publish.yml@e51d8e571e22473a2ddebf0ef8a2123f0ab2c02c # v1.7.1
