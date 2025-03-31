@@ -1,7 +1,7 @@
 ---
 description: TDD mandatory rules and best practices adopted in the Stratos project
-globs: *.dart
-alwaysApply: true
+globs: 
+alwaysApply: false
 ---
 # TDD (Test-Driven Development) Rules
 
