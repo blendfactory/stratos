@@ -1,7 +1,7 @@
 ---
 description: Workflow for implementing features using Test-Driven Development
-globs: *
-alwaysApply: true
+globs: 
+alwaysApply: false
 ---
 # TDD Task Workflow
 
