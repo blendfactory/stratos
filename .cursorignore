@@ -2,7 +2,10 @@
 .dvm/
 
 # GitHub related files
-.github/
+.github/*
+
+# Not exclude pull request template
+!.github/PULL_REQUEST_TEMPLATE.md
 
 # VSCode related files
 .vscode/
